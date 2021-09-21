@@ -7,20 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
     <style>
-        .background {
-            background-color: aquamarine;
-            width: 250px;
-            height: 250px;
+        * {
+            margin: 0px;
+            padding: 0px;
             box-sizing: border-box;
-            padding: 50px 10px 10px 30px;
-            margin-left: 10000000px;
+            text-decoration: none;
+        }
+
+        .parent {
+            background-color: aquamarine;
+            width: 10vw;
+            height: 60px;
+            padding: 20px;
+        }
+
+        .child {
+            background-color: violet;
+            height: 20px;
+            width: 80%;
         }
     </style>
 </head>
 
 <body>
-    <div class="background">
-        <h2>Lorem</h2>
+    <div class="parent">
+        <div class="child"></div>
     </div>
 </body>
 
