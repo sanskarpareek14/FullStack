@@ -14,28 +14,44 @@
             margin: 4px;
         }
 
-        /* child selector */
-        /* div.parent div {
-            background-color: green;
-        } */
-
-        /* div.parent h1,
         h2 {
-            background-color: blue;
-        } */
+            padding: 5px;
+            color: #f1f1f1;
+            background-color: #ffbf00;
+        }
 
-        div.parent div:nth-child(2) {
-            background-color: salmon;
+        h2:hover {
+            color: blue;
+            cursor: pointer;
+        }
+
+        div::selection {
+            background: sandybrown;
+        }
+
+        input:focus {
+            background-color: pink;
+        }
+
+        h2::after {
+            content: "I'm  after";
+            font-size: 2rem;
+            position: relative;
+            left: 50px;
+        }
+
+        h2::before {
+            content: "I'm before";
+            font-size: 0.8rem;
         }
     </style>
 </head>
 
 <body>
-    <div class="parent">
-        <div>I'm first div</div>
-        <div>I m second div</div>
-        <div>I m third again</div>
-    </div>
+    <h2>I'm a heading</h2>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deserunt nisi tenetur. Reiciendis a quidem quas
+        veniam maxime qui, ab distinctio nisi eius sint nostrum. Rem a inventore porro atque.</div>
+    <input type="text">
 </body>
 
 </html>
