@@ -11,42 +11,31 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            margin: 20px;
+            margin: 4px;
         }
 
-        .background {
-            color: #f1f1f1;
-            ;
-        }
+        /* child selector */
+        /* div.parent div {
+            background-color: green;
+        } */
 
-        h1.background {
-            background-color: #fb1100;
-        }
-
-        h2.background {
-            background-color: black;
-        }
-
-        h2.background#unique {
-            background-color: pink;
-        }
-
-        h3.background {
-            background-color: violet;
-        }
-
-        span.background {
+        /* div.parent h1,
+        h2 {
             background-color: blue;
+        } */
+
+        div.parent div:nth-child(2) {
+            background-color: salmon;
         }
     </style>
 </head>
 
 <body>
-    <h1 class="background">Heading one</h1>
-    <h2 id="unique" class="background">Heading two</h2>
-    <h2 class="background">Heading second two</h2>
-    <h3 class="background">Heading three</h3>
-    <span class="background">I m a span</span>
+    <div class="parent">
+        <div>I'm first div</div>
+        <div>I m second div</div>
+        <div>I m third again</div>
+    </div>
 </body>
 
 </html>
