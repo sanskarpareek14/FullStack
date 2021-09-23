@@ -11,47 +11,36 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial;
             margin: 4px;
         }
 
-        h2 {
-            padding: 5px;
-            color: #f1f1f1;
+        div.parent {
+            background-color: #111;
+            min-height: 200px;
+        }
+
+        div.child {
             background-color: #ffbf00;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            transition-duration: 2.5s;
+            transition-timing-function: cubic-bezier(0.29, 0.78, 0.58, 1);
+            transition-delay: 1s;
         }
 
-        h2:hover {
-            color: blue;
-            cursor: pointer;
-        }
-
-        div::selection {
-            background: sandybrown;
-        }
-
-        input:focus {
-            background-color: pink;
-        }
-
-        h2::after {
-            content: "I'm  after";
-            font-size: 2rem;
-            position: relative;
-            left: 50px;
-        }
-
-        h2::before {
-            content: "I'm before";
-            font-size: 0.8rem;
+        div.parent:hover div.child {
+            background-color: red;
+            transform: translateX(600px);
         }
     </style>
 </head>
 
 <body>
-    <h2>I'm a heading</h2>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deserunt nisi tenetur. Reiciendis a quidem quas
-        veniam maxime qui, ab distinctio nisi eius sint nostrum. Rem a inventore porro atque.</div>
-    <input type="text">
+    <div class="parent">
+        <div class="child"></div>
+    </div>
 </body>
 
 </html>
