@@ -8,26 +8,42 @@
     <title>Document</title>
     <style>
         div.parent {
+            display: flex;
+            align-items: stretch;
             background-color: #111;
-            font-size: 2rem;
+            height: 100vh;
         }
 
+        div.child {
+            background-color: #ffbf00;
+            flex-basis: 80%;
+        }
 
+        div.sidebar {
+            background-color: crimson;
+            flex-basis: 20%;
+        }
 
-        @media(max-width: 700px) {
-            div.parent {
-                background-color: violet;
-                font-size: 0.8rem;
-                color: #fff;
+        @media (max-width: 450px) {
+            div.sidebar {
+                /* background-color: crimson;
+                flex-basis: 0%; */
+                animation: 2s expand linear infinite;
+            }
+
+            div.child {
+                background-color: #ffbf00;
+                flex-basis: 100%;
             }
         }
 
-        @media(min-width: 700px) {
-            div.parent {
-                background-color: #ffbf00;
-                color: #fff;
-                font-size: 0.8rem;
-                color: #fff;
+        @keyframes expand {
+            0% {
+                flex-basis: 0%;
+            }
+
+            100% {
+                flex-basis: 30%;
             }
         }
     </style>
@@ -35,10 +51,8 @@
 
 <body>
     <div class="parent">
-        <h1>I'm a heading</h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ex et soluta aut ipsam sint reiciendis ad
-        nostrum possimus, corrupti fugiat suscipit ea ab quia nesciunt? Nostrum aliquid dolores maiores eum
-        necessitatibus, mollitia ducimus rem officiis officia. Perspiciatis, placeat ut.
+        <div class="sidebar"></div>
+        <div class="child"></div>
     </div>
 </body>
 
