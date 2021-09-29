@@ -13,30 +13,34 @@
 
 <body>
     <header></header>
-    <section class="list_container">
+    <section>
         <div class="container">
-            <div class="list_heading">
+            <div class="heading">
                 <h2>Todo List</h2>
-                <button></button>
+                <button>Mode: <input type="radio">
+                    <input type="radio">
+                </button>
             </div>
-
-            <div class="add_task">
-                <input type="text" placeholder="Add a task to the List...">
-                <div class="entity_code">&plus;</div>
-            </div>
-
-
-            <div class="list_def">
-                <div>0 items</div>
-                <div class="status">
-                    <div class="status_types">All</div>
-                    <div class="status_types">Pending</div>
-                    <div class="status_types">Completed</div>
+            <div class="add_items">
+                <div class="add_task">
+                    <input type="text" placeholder="Add a task to the List...">
+                    <div class="entity_codes">&plus;</div>
                 </div>
-                <div>Clear</div>
-                <div></div>
+                <ol class="todo-list">
+                    <div class="taskbar add_task">
+                        <div>1 items</div>
+                        <div class="list">
+                            <div class="list_status">All</div>
+                            <div class="list_status">Pending</div>
+                            <div class="list_status">Completed</div>
+                        </div>
+                        <div>Clear</div>
+                    </div>
+                    <div class="items"><input type="checkbox">
+                        Complete Assignment <div class="symbol">&#x2715; &#9776</div>
+                    </div>
+                </ol>
             </div>
-        </div>
         </div>
     </section>
     <footer>
