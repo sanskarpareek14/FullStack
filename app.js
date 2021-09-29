@@ -1,22 +1,11 @@
 var heading = document.getElementById('heading')
-var body = document.querySelector('body')
-var para = document.getElementsByClassName('para')
-var tags = document.getElementsByTagName('a')
-var query = document.querySelector('.para')
-var query1 = document.querySelectorAll('.para')
-// console.log(heading)
-// console.log(para.length)
-// console.log(para[0])
-// console.log(para[1])
-console.log(query)
-console.log(para)
-console.log(query1)
-heading.innerHTML = 'i was added by JS'
-heading.style = "color:red;font-size: 5rem;"
-console.log(heading.classList)
-heading.classList.add('four')
-console.log(heading.classList)
-heading.classList.remove('two')
-console.log(heading.classList)
-
-body.classList.remove('dark')
+var list = document.querySelector('ul')
+// console.log(list)
+var arr = ['Go to the GYM', 'drink protien']
+arr.push('Complete Assignment')
+for (var i = 0; i < arr.length; i++) {
+    var element = document.createElement('li')
+    var textNode = document.createTextNode(arr[i])
+    element.appendChild(textNode)
+    list.appendChild(element)
+}
