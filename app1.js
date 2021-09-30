@@ -1,24 +1,14 @@
-function greet(Name = "Chris", age = 45) {
-    console.log(Name, age)
+var button = document.querySelector('button')
+var input = document.querySelector('input')
+var list = document.querySelector('ul')
+
+const callbackFunction = (mystery) => {
+    // console.log(mystery.target)
+    // console.log(input.value)
+    const inputvalue = input.value
+    const element = document.createElement('li')
+    const textnode = document.createTextNode(inputvalue)
+    element.appendChild(textnode)
+    list.appendChild(element)
 }
-greet()
-
-
-add(a = 0, b = 0) => {
-    var sum = a + b
-    return sum
-}
-
-var add = (a = 0, b = 0) => {
-    var sum = a + b
-    return sum
-}
-console.log(add(10, 20))
-
-var greet = function (Name = "Chris", age = "48") {
-    console.log("Name is " + Name + "\nAge is " + age)
-}
-greet()
-
-
-
+button.addEventListener('click', callbackFunction)
