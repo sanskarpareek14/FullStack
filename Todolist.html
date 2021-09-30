@@ -17,14 +17,12 @@
         <div class="container">
             <div class="heading">
                 <h2>Todo List</h2>
-                <button>Mode: <input type="radio">
-                    <input type="radio">
-                </button>
+                <div class="mode">Mode: <button class="dark"></button></div>
             </div>
             <div class="add_items">
                 <div class="add_task">
                     <input type="text" placeholder="Add a task to the List...">
-                    <div class="entity_codes">&plus;</div>
+                    <div type="button" class="entity_codes">&plus;</div>
                 </div>
                 <ol class="todo-list">
                     <div class="taskbar add_task">
@@ -36,8 +34,9 @@
                         </div>
                         <div>Clear</div>
                     </div>
-                    <div class="items"><input type="checkbox">
-                        Complete Assignment <div class="symbol">&#x2715; &#9776</div>
+                    <div class="items"><input id="check" type="checkbox">
+                        Complete Assignment <div class="symbol"><span id="cross">&#x2715;</span> <span>&#9776</span>
+                        </div>
                     </div>
                 </ol>
             </div>
