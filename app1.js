@@ -1,46 +1,14 @@
-const a = document.querySelectorAll('input')[0]
-const b = document.querySelectorAll('input')[1]
-const add = document.querySelector('#Add')
-const subtract = document.querySelector('#Subtract')
-const multiply = document.querySelector('#Multiply')
-const Result = document.querySelector('.result')
+var arr = [1, 2, 3, 4, 5, 6, 7, 8]
 
-const sum = () => {
-    const result = parseInt(a.value) + parseInt(b.value)
-    Result.innerHTML = result
-}
-const Multiply = () => {
-    const result = parseInt(a.value) * parseInt(b.value)
-    Result.innerHTML = result
-}
-
-const calculate = (event, operation) => {
-    // if (operation == 'add') {
-    //     console.log('adding')
-    // } else if (operation == 'multiply') {
-    //     console.log('multiplying')
-    // }
-    console.log(event.target)
-    switch (operation) {
-        case "add":
-            Result.innerHTML = parseInt(a.value) + parseInt(b.value)
-            break
-        case "multiply":
-            Result.innerHTML = parseInt(a.value) * parseInt(b.value)
-            break
-        case "subtract":
-            Result.innerHTML = parseInt(a.value) - parseInt(b.value)
-            break
-        default:
-            Result.innerHTML = "Not a valid operation"
+var new_arr = arr.filter((element, index) => {
+    if (element > 2) {
+        return true
     }
-}
-add.addEventListener('click', (event) => {
-    calculate(event, 'add')
 })
-multiply.addEventListener('click', (event) => {
-    calculate(event, 'multiply')
-})
-subtract.addEventListener('click', (event) => {
-    calculate(event, 'subtract')
-})
+console.log(new_arr)
+// for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 == 0) {
+//         new_arr.push(arr[i])
+//     }
+// }
+// console.log(new_arr)
