@@ -1,5 +1,10 @@
-setTimeout(() => { console.log('Timer') }, 0)
+let value = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject('Hello')
+    }, 3000)
+})
+console.log(value)
 
-for (var i = 0; i < 50000; i++) {
-    console.log(i)
-}
+setTimeout(() => {
+    console.log(value)
+}, 4000)
