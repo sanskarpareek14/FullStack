@@ -1,3 +1,5 @@
-var data = fetch('https://jsonplaceholder.typicode.com/todos/1')
+setTimeout(() => { console.log('Timer') }, 0)
 
-console.log(data)
+for (var i = 0; i < 50000; i++) {
+    console.log(i)
+}
