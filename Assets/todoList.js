@@ -3,6 +3,7 @@ var Input = document.querySelectorAll('input')[0]
 var add_button = document.querySelector('.entity_codes')
 var button = document.querySelectorAll('button')[0]
 var list = document.querySelector('.items')
+var count = document.querySelector('#item_count')
 var t = true;
 const add_dark = () => {
     if (t) {
@@ -14,11 +15,8 @@ const add_dark = () => {
         t = true;
     }
 }
+
 var chores = []
-function deleteItem(value) {
-    const index = element.indexOf(value)
-    element.splice(index, 1)
-}
 const callbackFunction = () => {
     const inputvalue = Input.value
     if (chores.includes(inputvalue)) {
@@ -31,12 +29,13 @@ const callbackFunction = () => {
         delete_button.innerHTML = "&#x2715;"
         delete_button.style = "cursor:pointer;"
         const textnode = document.createTextNode(inputvalue)
+        delete_button.addEventListener('click', (event) => {
+            element.remove(event.target)
+        })
         element.appendChild(textnode)
         element.appendChild(delete_button)
         list.appendChild(element)
-        delete_button.addEventListener('click', (event) => {
-            deleteItem(event.target.innerHTML)
-        })
+        count.innerHTML = `${chores.length} items`
     }
 }
 button.addEventListener('click', add_dark)
