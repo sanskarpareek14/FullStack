@@ -1,17 +1,19 @@
-
-// fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
-//     .then(data => {
-//         console.log(data)
-//         data.forEach(user => {
-//             console.log(data)
-//         })
-//     })
-const fetchData = async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    console.log(response)
-
-    const data = await response.json()
-    console.log(data)
+const Input = document.querySelector('input')
+const Button = document.querySelector('button')
+const list = document.querySelector('div')
+const getData = async (item) => {
+    console.log(item)
+    const url = `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=Pizza=${item}`
+    console.log(url)
+    const res = await fetch(url)
+    const data = await res.json()
+    data.hits.forEach(recipe => {
+        console.log(recipe)
+    })
 }
 
-fetchData()
+
+
+Button.addEventListener('click', (e) => {
+    getData(Input.value)
+})
