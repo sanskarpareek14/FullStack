@@ -7,9 +7,7 @@ const getData = async (item) => {
     console.log(url)
     const res = await fetch(url)
     const data = await res.json()
-    data.hits.forEach(recipe => {
-        console.log(recipe)
-    })
+    console.log(data.hits)
 }
 
 
