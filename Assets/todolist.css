@@ -72,6 +72,7 @@ section{
     border-radius: 8px;
 }
 .heading .mode button:checked{
+    background-color: black;
 }
 .add_task{
     display: flex;
@@ -103,11 +104,17 @@ section{
     cursor: pointer;
 }
 ol.todo-list{
-    min-height: 100px;
+    min-height: 50px;
     margin-top: 70px;
     overflow-y: scroll;
     background-color: #f1f1f1;
     border-radius: 10px;
+}
+.dark{
+    background-color: black;
+}
+.dark::before{
+    background-color: white;
 }
 .todo-list .taskbar{
     display: flex;
@@ -129,19 +136,19 @@ ol.todo-list{
 .list .list_status{
     padding: 3px;
 }
-.todo-list .items{
+/* .todo-list .items{
     display:flex;
     align-items: center;
-    justify-content: space-between;;
+    justify-content: space-between;
     margin: 6px 8px 10px 2px;
     padding: 5px 5px 5px 10px;
     background-color: #fff;
     height: 35px;
     border-radius: 5px;
-}
-/* .todo-list .items{
-    flex-basis: 15%;
 } */
+.todo-list .items{
+    flex-basis: 15%;
+}
 .items #check{
     display: block;
     border-radius: 20%;
