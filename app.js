@@ -1,0 +1,5 @@
+const { add, subtract, multiply, divide } = require('./util.js')
+add()
+subtract()
+multiply()
+divide()
