@@ -1,8 +1,10 @@
-const button = document.querySelector('button')
-const input = document.querySelector('input')
-const div = document.querySelector('div')
+const path = require('path')
+// console.log(path)
 
-const arr = [1, 2, 3, 4, 5]
-localStorage.setItem('val', JSON.stringify(arr))
-console.log(JSON.parse(localStorage.getItem('val')))
+console.log(path.resolve('./app.js'))
 
+console.log(path.relative('C:', "./temp/util.js"))
+
+console.log(path.dirname('./temp/app.js'))
+console.log(path.join(__dirname, 'app.js'))
+console.log(__dirname)
