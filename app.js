@@ -1,10 +1,8 @@
-const path = require('path')
-// console.log(path)
+const fs = require('fs')
 
-console.log(path.resolve('./app.js'))
-
-console.log(path.relative('C:', "./temp/util.js"))
-
-console.log(path.dirname('./temp/app.js'))
-console.log(path.join(__dirname, 'app.js'))
-console.log(__dirname)
+// fs.readFile('./test.txt', 'utf8', (error, data) => {
+//     if (error) console.log(error)
+//     else console.log(data)
+// })
+console.log(fs.readFileSync('./test.txt', 'utf8'))
+console.log('I am a random log')
