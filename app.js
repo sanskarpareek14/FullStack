@@ -1,5 +1,6 @@
-const { add, subtract, multiply, divide } = require('./util.js')
-add()
-subtract()
-multiply()
-divide()
+const button = document.querySelector('button')
+const input = document.querySelector('input')
+const div = document.querySelector('div')
+const arr = localStorage.getItem('inputValue')
+
+console.log(typeof arr)
