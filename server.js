@@ -2,13 +2,17 @@ const express = require('express')
 const PORT = 3000
 const app = express()
 
-const verify = (req, res, next) => {
-    if (req.headers['user-agent'] === 'Thunder Client (https://www.thunderclient.io)') next()
-    else res.send('BLOCKED')
+const isVerified = (req, res, next) => {
+    if (req.headers.admin === 'true') next()
+    else res.send('UNAUTHORISED')
 }
 
-app.get('/', verify, (req, res) => {
-    res.send('Verified')
+app.get('/public', (req, res) => {
+    console.log(req.headers)
+    res.send('I am a public route')
+})
+app.get('/private', isVerified, (req, res) => {
+    res.send('I am a admin route')
 })
 
 
