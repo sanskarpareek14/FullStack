@@ -1,35 +1,17 @@
-// const http = require('http')
-// const fs = require('fs')
-// const path = require('path')
-// const { url } = require('inspector')
-// console.log(http)
-
-// const server = http.createServer((request, response) => {
-//     // console.log(request.url)
-//     // console.log(request.method)
-//     // const path = request.url
-//     // const markup = fs.readFileSync(path.resolve('./index.html'))
-//     // response.write(markup)
-//     // response.end()
-//     const { url } = request
-//     if (url == '/login') {
-//         response.write(`<h1>Login</h1>`)
-//     }
-//     if (url == '/signup') {
-//         response.write(`<h1>Signup</h1>`)
-//     }
-// })
-
-// server.listen(3000, () => {
-//     console.log(`Server runs at port ${3000}`)
-// })
 const express = require('express')
+const PORT = 3000
 const app = express()
-
-app.get('/', (req, res) => {
-    console.log(req)
+const data = [{ names: 'Sanskar' }, { names: 'Avinash' }, { names: 'Yashika' }]
+app.get('/Login', (req, res) => {
+    res.send('Login')
+})
+app.get('/Signup', (req, res) => {
+    res.send('SignUP')
+})
+app.get('/getNames', (req, res) => {
+    res.send(data)
 })
 
-app.listen(3000, () => {
-    console.log('Server listening at port 3000')
+app.listen(PORT, () => {
+    console.log(`Server running at port ${PORT}`)
 })

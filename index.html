@@ -9,15 +9,16 @@
 </head>
 
 <body>
-    <h1>I'm a heading</h1>
-    <img src="https://media.istockphoto.com/photos/mount-hood-oregon-picture-id1268487061?s=612x612" width="500px"
-        alt="">
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam asperiores vitae, dolores et molestiae
-        laboriosam harum dicta fugit repellat quas reprehenderit officiis magni dolore tempora hic excepturi? Laborum
-        ipsam aspernatur quaerat amet delectus obcaecati sapiente quos, pariatur architecto aperiam odio ea. Aperiam
-        maxime quo nisi praesentium officia, corporis velit eius.</div>
+    <ul></ul>
     <script>
-        window.alert = "Hi"
+        fetch('http://localhost:3000/getNames')
+            .then((res) => { res.json() })
+            .then((data) => {
+                list = document.querySelector('ul')
+                data.forEach(item => {
+                    list.append(data.item)
+                })
+            })
     </script>
 </body>
 
