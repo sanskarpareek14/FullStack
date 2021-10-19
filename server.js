@@ -4,7 +4,9 @@ PORT = 3001
 const app = express()
 app.use(express.json())
 const categoryRoutes = require('./routes/categoryRoutes')
+const ProductRoutes = require('./routes/ProductRoutes')
 app.use('/categories', categoryRoutes)
+app.use('/products', ProductRoutes)
 // console.log(categoryRoutes.stack)
 
 app.get('/', (req, res) => {
